@@ -1,7 +1,8 @@
 # Keqing
 The implementation for paper [keqing: knowledge-based question answering is a nature chain-of-thought mentor of LLM](https://arxiv.org/abs/2401.00426)
 
-### Overview
+### Workflow
+![这是工作流程图](/assets/workflow.pdf "Keqing")
 
 ### Environment configuration
 
