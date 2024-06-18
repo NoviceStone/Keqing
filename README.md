@@ -2,8 +2,7 @@
 The implementation for paper [keqing: knowledge-based question answering is a nature chain-of-thought mentor of LLM](https://arxiv.org/abs/2401.00426)
 
 ### Workflow
-
-<embed src="assets/workflow.pdf" type="application/pdf">
+![keqing's workflow](/assets/workflow.jpg)
 
 ### Environment configuration
 
