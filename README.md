@@ -16,10 +16,11 @@ python3 virtuoso.py start 3001 -d virtuoso_db
 ### Question decomposition
 **Core idea:** *complex questions can be challenging to handle, while answering simple questions is a breeze.*
 
-LLMs are inherently endowed with powerful semantic understanding capabilities, offering a preferred tool for parsing complex questions into simpler sub-questions. To ensure each sub-question can be resolved within a one-step inference over KB, we employ instruction fine-tuning
+LLMs are inherently endowed with powerful semantic understanding capabilities, offering us a preferred tool for parsing complex questions into simpler sub-questions. For KBQA, one would expect that each decomposed sub-question can be easily resolved with a single-hop inference over KG, and this usually requires some alignment between the LLM and the KG.
+So we resort to supervised instruction fine-tuning (SFT) to adapt the LLM to the structured knowledge in KG.
 
-[LitGPT](https://github.com/Lightning-AI/litgpt)
-Supervised fine-tuning with LoRA
+Specifically, we [LitGPT](https://github.com/Lightning-AI/litgpt)
+
 ```JSON
 {
     "instruction": "Parse the user input question to several subquestions: [{'question': subquestion, 'id': subquestion_id, 'dep': dependency_subquestion_id, 'seed_entity': seed_entity or <GENERATED>-dep_id}]...",
