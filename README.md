@@ -17,8 +17,8 @@ python3 virtuoso.py start 3001 -d virtuoso_db
 **Core idea:** *complex questions can be challenging to handle, while answering simple questions is a breeze.*
 
 LLMs are inherently endowed with powerful semantic understanding capabilities, offering us a preferred tool for parsing complex questions into simpler sub-questions. 
-For KBQA, one would expect that each decomposed sub-question can be easily resolved with a single-hop inference over KG, yet this usually requires some alignment between the LLM and the KG.
-Therefore, we resort to [instruction fine-tuning](https://arxiv.org/abs/2203.02155) (**IFT**) to adapt the LLM to the structured knowledge in KG.
+For KBQA, one would expect that each decomposed sub-question can be easily resolved with a single-hop inference over KG, yet this often requires some alignment between the LLM and the KG.
+Therefore, we resort to [instruction fine-tuning](https://arxiv.org/abs/2203.02155) to adapt the LLM to the structured knowledge in KG.
 
 Specifically, we Llama2 use a vey project [LitGPT](https://github.com/Lightning-AI/litgpt)
 
