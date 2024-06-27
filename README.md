@@ -5,6 +5,9 @@ The implementation for paper [keqing: knowledge-based question answering is a na
 ![keqing's workflow](/assets/workflow.jpg)
 
 ### Environment configuration
+```bash
+conda create -n keqing python=3.11 -y
+```
 
 ### 0. Preliminary
 - Data Download
