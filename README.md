@@ -15,7 +15,8 @@ pip install 'litgpt[all]'
 ```
 
 - Data download
-  - The raw datasets are available at their official websites [MetaQA](https://github.com/yuyuz/MetaQA)、[WebQSP](https://www.microsoft.com/en-us/download/details.aspx?id=52763) and [GrailQA](https://dki-lab.github.io/GrailQA)
+  - The raw datasets are available at their official websites [MetaQA](https://github.com/yuyuz/MetaQA)、[WebQSP](https://www.microsoft.com/en-us/download/details.aspx?id=52763) and [GrailQA](https://dki-lab.github.io/GrailQA).
+  - We have also provided the processed version of these datasets tailored to Keqing.
 
 ### Question Decomposition
 **Core idea:** *complex questions can be challenging to handle, while answering simple questions is a breeze.*
