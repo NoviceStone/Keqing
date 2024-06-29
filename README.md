@@ -4,9 +4,13 @@ The implementation for paper [keqing: knowledge-based question answering is a na
 ### Workflow
 ![keqing's workflow](/assets/workflow.jpg)
 
-### Environment configuration
+### Get started
 ```bash
+git clone https://github.com/NoviceStone/Keqing.git
+cd Keqing
 conda create -n keqing python=3.11 -y
+conda activate keqing
+pip install 'litgpt[all]'
 ```
 
 ### 0. Preliminary
