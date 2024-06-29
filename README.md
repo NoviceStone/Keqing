@@ -4,7 +4,8 @@ The implementation for paper [keqing: knowledge-based question answering is a na
 ### Workflow
 ![keqing's workflow](/assets/workflow.jpg)
 
-### Get started
+### #Get Started
+- Environment configuration
 ```bash
 git clone https://github.com/NoviceStone/Keqing.git
 cd Keqing
@@ -13,14 +14,10 @@ conda activate keqing
 pip install 'litgpt[all]'
 ```
 
-### 0. Preliminary
-- Data Download
-- Finish the Freebase Setup refer to the guidance from dki-lab and start the freebase service.
-```
-python3 virtuoso.py start 3001 -d virtuoso_db
-```
+- Data download
+  - The raw datasets are available at their official websites [MetaQA](https://github.com/yuyuz/MetaQA)、[WebQSP](https://www.microsoft.com/en-us/download/details.aspx?id=52763) and [GrailQA](https://dki-lab.github.io/GrailQA)
 
-### Question decomposition
+### Question Decomposition
 **Core idea:** *complex questions can be challenging to handle, while answering simple questions is a breeze.*
 
 LLMs are inherently endowed with powerful semantic understanding capabilities, offering us a preferred tool for parsing complex questions into simpler sub-questions. 
