@@ -4,7 +4,7 @@ The implementation for paper [keqing: knowledge-based question answering is a na
 ### Workflow
 ![keqing's workflow](/assets/workflow.jpg)
 
-### #Get Started
+### Get Started
 - Environment configuration
 ```bash
 git clone https://github.com/NoviceStone/Keqing.git
@@ -16,7 +16,7 @@ pip install 'litgpt[all]'
 
 - Data download
   - The raw datasets are available at their official websites [MetaQA](https://github.com/yuyuz/MetaQA)、[WebQSP](https://www.microsoft.com/en-us/download/details.aspx?id=52763) and [GrailQA](https://dki-lab.github.io/GrailQA).
-  - We have also provided the processed version of these datasets tailored to Keqing.
+  - We have also provided the **processed version** of [MetaQA](https://drive.google.com/file/d/1kQ5d9ASbc53BDQDoxM2_-c5J5wkaDjz5/view?usp=sharing) tailored to Keqing, you can download it and put the unzipped `data` under the folder `Keqing`.
 
 ### Question Decomposition
 **Core idea:** *complex questions can be challenging to handle, while answering simple questions is a breeze.*
@@ -34,3 +34,15 @@ To implement the fine-tuning, an easy-to-use project [LitGPT](https://github.com
     "output": "[{'question': 'who acted in the movie [MASK]?', 'id': 0, 'dep': [-1], 'seed_entity': ['Kung Fu Panda']}, {'question': 'what films did [MASK] act in?', 'id': 1, 'dep': [0], 'seed_entity': ['<GENERATED>-0']}]"
 }
 ```
+
+**Checkpoints:** we provide the [fine-tuned LoRA weights](https://drive.google.com/file/d/19Edq-ObuouZto6_w0yMEk53uEO8StYq6/view?usp=drive_link) of Llama-2-7b on MetaQA, you can download and use it directly. But first you may need to download the base model weights for [Llama-2-7b](https://huggingface.co/meta-llama/Llama-2-7b-hf/tree/main). Then we can merge these two weights into a complete fine-tuned model weights using [LitGPT](https://github.com/Lightning-AI/litgpt).
+```bash
+git clone https://github.com/Lightning-AI/litgpt.git
+cd litgpt
+
+# put the base model (llama-2-7b) weights under this directory
+mkdir checkpoints
+
+litgpt merge_lora --checkpoint_dir out/finetune/lora-llama2-7b-metaQA-allhop/final
+```
+
