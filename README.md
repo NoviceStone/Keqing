@@ -54,4 +54,12 @@ python chat.py --kb_filepath ./data/MetaQA/kb.txt --llama_checkpoint_dir ./finet
 ```
 
 ### Citation
-If you use Keing in your research, please cite the following work
+If you find our work helpful in your research and use it, please cite the following work.
+```bib
+@article{wang2023keqing,
+  title={keqing: knowledge-based question answering is a nature chain-of-thought mentor of LLM},
+  author={Wang, Chaojie and Xu, Yishi and Peng, Zhong and Zhang, Chenxi and Chen, Bo and Wang, Xinrun and Feng, Lei and An, Bo},
+  journal={arXiv preprint arXiv:2401.00426},
+  year={2023}
+}
+```
