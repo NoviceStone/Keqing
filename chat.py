@@ -248,7 +248,7 @@ if __name__ == '__main__':
         "--kb_filepath",
         type=str,
         default="",
-        help="Path to test data.",
+        help="Path to knowledge base.",
     )
     parser.add_argument(
         "--llama_checkpoint_dir",
