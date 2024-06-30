@@ -3,7 +3,7 @@ The implementation for paper [keqing: knowledge-based question answering is a na
 
 ### Workflow
 ![keqing's workflow](/assets/workflow.jpg)
-***
+
 ### Get Started
 - Environment configuration
 ```bash
@@ -46,7 +46,7 @@ huggingface-cli download --resume-download meta-llama/Llama-2-7b-hf --local-dir 
 
 litgpt merge_lora --checkpoint_dir ./finetuned_weights/decomposer/lora-llama-7b-MetaQA/final
 ```
-***
+
 ### Run
 To start an interactive Q&A experience with Keqing, you can execute the command
 ```bash
