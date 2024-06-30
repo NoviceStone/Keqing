@@ -3,7 +3,7 @@ The implementation for paper [keqing: knowledge-based question answering is a na
 
 ### Workflow
 ![keqing's workflow](/assets/workflow.jpg)
-
+***
 ### Get Started
 - Environment configuration
 ```bash
@@ -17,7 +17,7 @@ pip install 'litgpt[all]'
 - Data download
   - The raw datasets are available at their official websites [MetaQA](https://github.com/yuyuz/MetaQA)、[WebQSP](https://www.microsoft.com/en-us/download/details.aspx?id=52763) and [GrailQA](https://dki-lab.github.io/GrailQA).
   - We have also provided the **processed version** of [MetaQA](https://drive.google.com/file/d/1kQ5d9ASbc53BDQDoxM2_-c5J5wkaDjz5/view?usp=sharing) tailored to Keqing, you can download it and put the unzipped `data` under the folder `Keqing`.
-
+***
 ### Question Decomposition
 **Core idea:** *complex questions can be challenging to handle, while answering simple questions is a breeze.*
 
@@ -46,13 +46,13 @@ huggingface-cli download --resume-download meta-llama/Llama-2-7b-hf --local-dir 
 
 litgpt merge_lora --checkpoint_dir ./finetuned_weights/decomposer/lora-llama-7b-MetaQA/final
 ```
-
+***
 ### Run
 To start an interactive Q&A experience with Keqing, you can execute the command
 ```bash
 python chat.py --kb_filepath ./data/MetaQA/kb.txt --llama_checkpoint_dir ./finetuned_weights/decomposer/lora-llama-7b-MetaQA/final
 ```
-
+***
 ### Citation
 If you find our work helpful in your research and use it, please cite the following work.
 ```bib
