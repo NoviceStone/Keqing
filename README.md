@@ -44,6 +44,14 @@ cd litgpt
 mkdir -p checkpoints/meta-llama
 huggingface-cli download --resume-download meta-llama/Llama-2-7b-hf --local-dir ./checkpoints/meta-llama --token *****
 
-litgpt merge_lora --checkpoint_dir out/finetune/lora-llama2-7b-metaQA-allhop/final
+litgpt merge_lora --checkpoint_dir ./finetuned_weights/decomposer/lora-llama-7b-MetaQA/final
 ```
 
+### Run
+To start an interactive Q&A experience with Keqing, you can execute the command
+```bash
+python chat.py --kb_filepath ./data/MetaQA/kb.txt --llama_checkpoint_dir ./finetuned_weights/decomposer/lora-llama-7b-MetaQA/final
+```
+
+### Citation
+If you use Keing in your research, please cite the following work
